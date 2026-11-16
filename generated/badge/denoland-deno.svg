@@ -9,20 +9,24 @@
         0%, 100% { opacity: 0.7; }
         50% { opacity: 1; }
       }
+      @keyframes badge-blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+      }
       .badge-bg-left { fill: #1a1c20; }
-      .badge-bg-right { fill: #24221a; }
+      .badge-bg-right { fill: #241a1a; }
       .badge-text { fill: #e2e8f0; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 11px; }
-      .badge-value { fill: #eab308; font-family: ui-monospace, 'SF Mono', Consolas, monospace; font-size: 11px; font-weight: bold;  }
+      .badge-value { fill: #ef4444; font-family: ui-monospace, 'SF Mono', Consolas, monospace; font-size: 11px; font-weight: bold; animation: badge-blink 1s ease-in-out infinite; }
       .badge-ecg {
         fill: none;
-        stroke: #eab308;
+        stroke: #ef4444;
         stroke-width: 1.8;
         stroke-linecap: round;
         /* no filter - avoids render glitch */
         stroke-dasharray: 200;
-        animation: badge-trace 2.5s linear infinite;
+        animation: badge-trace 3.5s linear infinite;
       }
-      .badge-heart { fill: #eab308; font-size: 10px; animation: badge-pulse 0.6s ease-in-out infinite; }
+      .badge-heart { fill: #ef4444; font-size: 10px; animation: badge-blink 0.4s ease-in-out infinite; }
 
       @media (prefers-color-scheme: light) {
         .badge-bg-left { fill: #f1f5f9; }
@@ -35,12 +39,12 @@
   <rect class="badge-bg-left" width="90" height="32" rx="4"/>
   <rect class="badge-bg-right" x="90" width="190" height="32" rx="0"/>
   <rect class="badge-bg-right" x="276" width="4" height="32" rx="4"/>
-  <rect fill="none" stroke="#2e3238" stroke-width="1" x="0.5" y="0.5" width="279" height="31" rx="4"/>
+  <rect fill="none" stroke="#ef444425" stroke-width="1" x="0.5" y="0.5" width="279" height="31" rx="4"/>
 
   <text class="badge-text" x="10" y="20">health</text>
 
-  <path class="badge-ecg" d="M 95,16 L 95,15.96 L 96.26,15.87 L 97.52,15.83 L 98.78,15.87 L 100.04,15.41 L 101.3,15.14 L 102.56,15.6 L 103.82,15.98 L 105.08,16.1 L 106.34,14.38 L 107.6,5.92 L 108.86,15.25 L 110.12,16.12 L 111.38,15.61 L 112.64,15.13 L 113.9,14.73 L 115.16,13.83 L 116.42,13.3 L 117.68,14.15 L 118.94,15.4 L 120.2,16.05 L 121.46,16.09 L 122.72,15.81 L 123.98,16.25 L 125.24,15.89 L 126.5,16 L 127.76,15.82 L 129.02,15.71 L 130.28,15.72 L 131.54,15.74 L 132.8,16.22 L 134.06,16.19 L 135.32,15.73 L 136.58,15.89 L 137.84,16.24 L 139.1,15.77 L 140.36,15.79 L 141.62,15.95 L 142.87,16.17 L 144.13,16.27 L 152.95,16.02 L 160.51,15.9 L 160.51,16.24 L 161.59,16.02 L 162.68,15.76 L 163.76,15.65 L 164.84,15.47 L 165.92,15 L 167,15.48 L 168.08,15.82 L 169.17,16.26 L 170.25,14.57 L 171.33,5.91 L 172.41,14.73 L 173.49,16.42 L 174.57,15.61 L 175.66,15.11 L 176.74,14.57 L 177.82,13.84 L 178.9,13.4 L 179.98,14.33 L 181.06,15.44 L 182.14,15.84 L 183.23,15.96 L 184.31,15.94 L 185.39,16.03 L 186.47,16.28 L 187.55,15.92 L 188.63,16.2 L 189.72,15.86 L 190.8,16.22 L 191.88,15.87 L 192.96,15.96 L 194.04,15.79 L 195.12,16.13 L 196.21,16.15 L 197.29,15.71 L 198.37,15.97 L 199.45,16.2 L 200.53,16.14 L 201.61,16.25 L 202.69,16.03 L 210.27,16.01 L 216.75,16.06 L 216.75,15.83 L 217.94,16.22 L 219.12,16.12 L 220.31,15.68 L 221.49,15.19 L 222.67,15.42 L 223.86,15.68 L 225.04,15.8 L 226,16"/>
+  <path class="badge-ecg" d="M 95,16 L 95,15.97 L 96.26,16.76 L 97.53,16.89 L 98.79,15.79 L 100.05,15.39 L 101.32,16.69 L 102.58,15.37 L 103.85,15.48 L 105.11,15.99 L 106.37,14.49 L 107.64,5.85 L 108.9,14.46 L 110.16,15.04 L 111.43,14.07 L 112.69,14.02 L 113.96,13.65 L 115.22,12.98 L 116.48,13.26 L 117.75,14.59 L 119.01,15.19 L 120.27,15.68 L 121.54,15.94 L 122.8,16.17 L 124.07,16.27 L 125.33,15.97 L 126.59,16.2 L 127.86,16.24 L 129.12,16.24 L 130.38,16.04 L 131.65,15.89 L 132.91,16.04 L 134.18,16.21 L 135.44,15.87 L 136.7,16.09 L 137.97,16.09 L 139.23,16.23 L 140.49,16.16 L 141.76,15.8 L 143.02,15.74 L 144.29,16.22 L 153.13,16.08 L 160.71,16.07 L 160.71,16.08 L 161.87,16.32 L 163.03,15.65 L 164.19,15.83 L 165.35,15.68 L 166.51,15.88 L 167.67,15.42 L 168.83,16.6 L 169.99,16.09 L 171.15,14.37 L 172.31,6.12 L 173.47,14.58 L 174.63,15.57 L 175.79,14.58 L 176.95,13.87 L 178.11,13.39 L 179.27,13.53 L 180.43,13.66 L 181.59,14.41 L 182.75,15.41 L 183.91,15.67 L 185.07,15.83 L 186.23,15.96 L 187.39,15.88 L 188.55,16.22 L 189.71,15.86 L 190.87,16.03 L 192.03,15.73 L 193.19,15.81 L 194.35,16.03 L 195.51,15.97 L 196.67,16.25 L 197.83,15.72 L 198.98,16.17 L 200.14,16.18 L 201.3,16.18 L 202.46,15.75 L 203.62,15.72 L 204.78,16.09 L 205.94,15.73 L 214.06,16.02 L 221.02,15.96 L 226,16"/>
 
-  <text class="badge-value" x="232" y="20">53/100</text>
+  <text class="badge-value" x="232" y="20">47/100</text>
   <text class="badge-heart" x="268" y="20">&#x2665;</text>
 </svg>
